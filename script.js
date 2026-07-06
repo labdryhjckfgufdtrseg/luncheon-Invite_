@@ -1,13 +1,27 @@
 const openBtn = document.getElementById("open");
 const music = document.getElementById("music");
 
-openBtn.onclick = () => {
-    music.play();
-    document.querySelector(".pages").scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth"
-    });
-};
+openBtn.addEventListener("click", () => {
+
+    // Play music safely (browser-friendly)
+    if (music) {
+        music.muted = false;
+        music.currentTime = 0;
+        music.play().catch(() => {
+            console.log("User interaction required for audio");
+        });
+    }
+
+    // Smooth scroll to next page
+    const pages = document.querySelector(".pages");
+    if (pages) {
+        pages.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        });
+    }
+
+});
 
 /* COUNTDOWN */
 const countdown = document.getElementById("countdown");
