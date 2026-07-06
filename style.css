@@ -5,17 +5,10 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Poppins,sans-serif;
-color:#6d4c52;
+font-family:Poppins;
+background:linear-gradient(135deg,#fff7f5,#f3e3df);
 overflow:hidden;
-
-background:
-linear-gradient(rgba(255,247,245,0.85), rgba(241,223,219,0.85)),
-url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1400&q=80");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+color:#6d4c52;
 }
 
 /* SCROLL */
@@ -35,118 +28,101 @@ scroll-snap-align:start;
 
 /* CARD */
 .card{
-width:340px;
-height:600px;
-
 background:rgba(255,255,255,0.75);
-backdrop-filter:blur(14px);
-
-border-radius:28px;
-padding:40px 25px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
 text-align:center;
-
+width:85%;
+max-width:400px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
 position:relative;
-overflow:hidden;
-
-box-shadow:0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* BORDER */
-.card::before{
-content:"";
-position:absolute;
-top:15px;
-left:15px;
-right:15px;
-bottom:15px;
+/* LUXURY COVER */
+.cover{
+background:linear-gradient(135deg,#d79ba7,#b67a70);
+}
 
-border-radius:20px;
-border:1px solid rgba(182,122,112,0.35);
+.luxury{
+color:white;
 }
 
 /* TEXT */
 h1{
 font-family:"Great Vibes";
-font-size:50px;
-text-shadow:0 2px 10px rgba(182,122,112,0.3);
+font-size:48px;
 }
 
 h2{
-font-size:14px;
 letter-spacing:2px;
+font-size:14px;
 margin-bottom:10px;
-}
-
-h3{
-font-family:"Great Vibes";
-font-size:34px;
-margin-bottom:18px;
-}
-
-p{
-font-size:15px;
-line-height:1.7;
 }
 
 .big{
 font-size:20px;
+margin:10px 0;
+}
+
+.tag{
+font-style:italic;
 margin-top:10px;
 }
 
 /* BUTTON */
 a{
-margin:10px;
-padding:12px 26px;
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
 border-radius:30px;
-background:linear-gradient(135deg,#d79ba7,#b67a70);
+background:#b67a70;
 color:white;
 text-decoration:none;
-transition:.3s;
 }
 
-a:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+/* TAP */
+.tap{
+margin-top:20px;
+font-size:14px;
+opacity:0.8;
 }
 
-/* SEAL */
-.seal{
-width:85px;
-height:85px;
+/* DRESS */
+.dress{
+width:70px;
+height:90px;
+background:linear-gradient(#fff,#eee);
 border-radius:50%;
-background:radial-gradient(circle,#d4af37,#b8962e);
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-margin-bottom:20px;
-color:white;
+margin:15px auto;
 }
 
-/* PETALS */
-.petals{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-z-index:999;
+/* PALACE */
+.palace{
+width:100px;
+height:60px;
+background:#d9b8b2;
+margin:15px auto;
+border-radius:10px;
 }
 
-.petal{
+/* 🌸 PETALS */
+.petals span{
 position:absolute;
-top:-10px;
-font-size:16px;
+width:10px;
+height:10px;
+background:#f2b8c6;
+border-radius:50%;
 animation:fall linear infinite;
 }
 
 @keyframes fall{
-0%{transform:translateY(-10vh);}
-100%{transform:translateY(110vh);}
+0%{
+transform:translateY(-100px);
+opacity:0;
+}
+100%{
+transform:translateY(100vh);
+opacity:1;
+}
 }
