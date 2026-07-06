@@ -6,7 +6,8 @@ box-sizing:border-box;
 
 body{
 font-family:Poppins,sans-serif;
-background:linear-gradient(135deg,#fdf6f4,#f7eaea);
+background:linear-gradient(135deg,#fff7f5,#f3e3df);
+color:#6d4c52;
 overflow:hidden;
 }
 
