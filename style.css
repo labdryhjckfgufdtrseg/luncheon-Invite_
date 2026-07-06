@@ -1,0 +1,158 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#fdf6f4,#f7eaea);
+overflow:hidden;
+}
+
+/* SCROLL */
+.pages{
+height:100vh;
+overflow-y:scroll;
+scroll-snap-type:y mandatory;
+}
+
+.page{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+scroll-snap-align:start;
+}
+
+/* CARD */
+.card{
+width:340px;
+height:600px;
+
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(15px);
+
+border-radius:28px;
+
+padding:40px 25px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.12),
+inset 0 0 0 1px rgba(182,122,112,0.2);
+
+position:relative;
+overflow:hidden;
+}
+
+/* INNER BORDER */
+.card::before{
+content:"";
+position:absolute;
+top:15px;
+left:15px;
+right:15px;
+bottom:15px;
+
+border:1px solid rgba(182,122,112,0.3);
+border-radius:20px;
+}
+
+/* COVER SPECIAL */
+.cover{
+background:linear-gradient(135deg,#c98d95,#b67a70);
+}
+
+.luxury{
+color:white;
+}
+
+.luxury::before{
+border-color:rgba(255,255,255,0.4);
+}
+
+/* TEXT */
+h1{
+font-family:"Great Vibes";
+font-size:52px;
+margin-bottom:10px;
+}
+
+h2{
+font-family:"Cormorant Garamond";
+font-size:28px;
+margin-bottom:10px;
+color:#9b6d73;
+}
+
+h3{
+font-family:"Great Vibes";
+font-size:30px;
+color:#b67a70;
+margin-bottom:10px;
+}
+
+.sub{
+font-size:18px;
+letter-spacing:2px;
+}
+
+.tag{
+font-style:italic;
+margin-top:10px;
+}
+
+.big{
+font-size:22px;
+margin-top:10px;
+}
+
+p{
+margin:6px 0;
+line-height:1.6;
+}
+
+/* BUTTON */
+a{
+display:inline-block;
+margin:10px;
+padding:12px 28px;
+
+border-radius:30px;
+
+background:linear-gradient(135deg,#d79ba7,#b67a70);
+color:white;
+text-decoration:none;
+
+transition:.3s;
+}
+
+a:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(182,122,112,0.4);
+}
+
+/* SEAL BUTTON */
+.seal{
+width:80px;
+height:80px;
+border-radius:50%;
+
+background:radial-gradient(circle,#d4af37,#b8962e);
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+margin-bottom:20px;
+
+font-size:14px;
+}
